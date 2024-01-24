@@ -6,5 +6,8 @@ public class Hello {
 		System.out.println("HelloWorld");
 		System.out.println("안녕하세요 ㅋㅋㅋ");
 		
+		for(int i=0;i<10;i++) {
+			System.out.println(i + ", ");
+		}
 	}
 }
