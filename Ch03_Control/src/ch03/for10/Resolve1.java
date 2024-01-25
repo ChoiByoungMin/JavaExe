@@ -17,7 +17,21 @@ public class Resolve1 {
 		System.out.print("돈의 액수를 입금하세요.");
 		money = sc.nextInt();
 		
-		
-	}
+		int[] denominations = { 50000, 10000, 5000, 1000, 500, 100, 50, 10, 1 };
+        int[] counts = new int[denominations.length];
 
+        for (int i = 0; i < denominations.length; i++) {
+            counts[i] = money / denominations[i];
+            money %= denominations[i];
+        }
+
+        // 변환된 개수 출력
+        for (int i = 0; i < denominations.length; i++) {
+            if (counts[i] > 0) {
+                System.out.println(denominations[i] + "원: " + counts[i] + "개");
+            }
+        }
+
+        sc.close();
+    }
 }

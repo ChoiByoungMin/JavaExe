@@ -32,6 +32,8 @@ public class Resolve14 {
 			m++;
 		}while(m<=9);
 		
+		sc.close();
+		
 	}
 
 }

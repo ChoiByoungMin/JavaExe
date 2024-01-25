@@ -16,6 +16,7 @@ public class Resolve12 {
 			i++;
 			System.out.println("감사합니다");
 		}
+		sc.close();
 		
 //		for(int i= 1;i<= a; i++) {
 //			System.out.println("감사합니다");

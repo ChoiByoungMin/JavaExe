@@ -27,6 +27,8 @@ public class Resolve13 {
 			System.out.println((n*3) + ", ");
 			n++;
 		}while(n<=count);
+		
+		sc.close();
 	}
 
 }
