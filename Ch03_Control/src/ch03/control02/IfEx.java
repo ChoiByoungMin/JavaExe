@@ -15,9 +15,9 @@ public class IfEx {
 		if(score >= 90)
 			System.out.println("A학점");
 		
-//		if(score >= 90)
+//		if(score >= 90)	{
 //		System.out.println("A학점");
-		
+//		}		
 		sc.close();
 		
 	}
