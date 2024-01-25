@@ -14,9 +14,8 @@ public class IfEx {
 		// if문은 () 결과가 참일 때 소속 영역을 실행한다.
 		if(score >= 90)
 			System.out.println("A학점");
-		
-//		if(score >= 90)
-//		System.out.println("A학점");
+		else
+			System.out.println("A학점은 아님니다.");
 		
 		sc.close();
 		
