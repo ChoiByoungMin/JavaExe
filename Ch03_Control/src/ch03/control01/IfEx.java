@@ -23,6 +23,8 @@ public class IfEx {
 		else 
 			System.out.println("F학점");
 		
+		sc.close();
+		
 	}
 
 }

@@ -18,6 +18,8 @@ public class IfEx {
 //		if(score >= 90)
 //		System.out.println("A학점");
 		
+		sc.close();
+		
 	}
 
 }
