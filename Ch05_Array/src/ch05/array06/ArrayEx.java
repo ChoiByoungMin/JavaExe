@@ -1,7 +1,6 @@
 package ch05.array06;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 // 배열의 얕은 복사/깊은 복사
 public class ArrayEx {
