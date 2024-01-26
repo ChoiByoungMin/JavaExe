@@ -30,5 +30,31 @@ public class Resolve2 {
         }
 
         sc.close();
+ /*
+  * Scanner sc = new Scanner(System.in);
+		
+		while(true) {		
+			System.out.print("1~99까지 정수 입력(음수면 종료) >> ");
+			int num = sc.nextInt();
+			if(num < 0)
+				break;
+			int n10 = num/10;
+			int n1 = num%10;
+			
+			int cnt = 0;
+			if(n10==3 || n10==6 || n10==9)
+				cnt++;
+			if(n1==3 || n1==6 || n1==9)
+				cnt++;
+			
+			if(cnt==1)
+				System.out.println("박수짝");
+			else if(cnt==2)
+				System.out.println("박수짝짝");
+		}
+		System.out.println("End~");
+		
+		sc.close();
+  */
     }
 }
