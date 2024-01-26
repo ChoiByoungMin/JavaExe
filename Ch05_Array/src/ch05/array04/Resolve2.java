@@ -7,7 +7,12 @@ public class Resolve2 {
 				"순신","강감찬","귀리부인","마이클",
 				"브루스","빌리","빌",};
 		
-		
+		for(int i= names.length -1;i>=0; i--) {
+			System.out.print(names[i]);
+			System.out.println(" : "+i);
+			
+		}
 	}
 
+	
 }
