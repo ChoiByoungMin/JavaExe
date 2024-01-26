@@ -10,9 +10,10 @@ public class Resolve4 {
 		Scanner sc = new Scanner(System.in);
 		
 		int[] isThr = new int[10];
-		for(int i =0; i<isThr.length;i++) {
-			System.out.println(3*(i+1));
+		for(int i = isThr.length -1 ;i>=0; i--) {
+			System.out.print(3*(i+1)+ ", ");
 		}
+		
 		
 		sc.close();
 	}
