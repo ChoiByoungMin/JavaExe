@@ -8,16 +8,35 @@ import java.util.Scanner;
 
 public class Resolve {
 	
+	public static int compare1(int num0, int num1) {
+		int result = 0;
+		
+		result = num0>num1 ? num0:num1;
+
+		return(result);
+	}
+	
+	
+	public static int compare2(int num0, int num1) {
+		
+		int result = 0;
+		
+		result = num0<num1 ? num0:num1;
+		return(result);
+	}
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("정수를 입력하세요 >> ");
+		System.out.print("정수를 입력하세요 >> ");
 		int num0 = sc.nextInt();
-		System.out.println("정수를 입력하세요 >>");
+		System.out.print("정수를 입력하세요 >>");
 		int num1 = sc.nextInt();
-		System.out.println("큰값 , 작은값");
-		String cp = sc.next();
+		
+		System.out.println("큰값"+ compare1(num0,num1));
+		System.out.println("작은값"+ compare2(num0,num1));
+		
+		sc.close();
 
 	}
 
