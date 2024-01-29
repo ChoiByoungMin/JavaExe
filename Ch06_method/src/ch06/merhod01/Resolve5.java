@@ -11,17 +11,26 @@ import java.util.Scanner;
 //*****
 //위처럼 출력되는 void star(int num) 메서드를 작성하고 사용해보세요
 public class Resolve5 {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+	public static void star(int num) {
 		
-		System.out.println("star(a)");
-		int a = sc.nextInt();
-		
-		for(int i=1;i<=a;i++) {
+		for(int i=1;i<=num;i++) {
 			for(int j=1;j<=i;j++)
 				System.out.print("*");
 			System.out.println();
 		}
+	}
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("a 정수를 입력하세요");
+		String a = sc.nextLine();
+		int num = Integer.parseInt(a);
+		System.out.println("star"+"("+a+")");
+		
+		star(num);
+		sc.close();
+		
 	}
 
 }
