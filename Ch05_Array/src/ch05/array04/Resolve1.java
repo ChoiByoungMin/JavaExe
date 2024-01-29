@@ -9,6 +9,12 @@ public class Resolve1 {
 		
 		for(int i = 0;i<names.length;i++)
 			System.out.print(names[i] + " ");
+		System.out.println();
+		
+		for(String name : names)
+			System.out.print(name + ""
+					+ " ");
+		System.out.println();
 		
 	}
 
