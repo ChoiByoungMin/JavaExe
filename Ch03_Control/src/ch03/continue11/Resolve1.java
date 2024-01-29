@@ -7,8 +7,11 @@ public class Resolve1 {
 		int sum =0;
 		
 		for(int i=1;i<=100;i++) {
-			sum += 3*i;
-			System.out.println(sum);
+			if(i%3==0) {
+				System.out.println(i);
+				sum += i;
+			}
+		System.out.println("총합" +sum);
 		}
 		
 	}
