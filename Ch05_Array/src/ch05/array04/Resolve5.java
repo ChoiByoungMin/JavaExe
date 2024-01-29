@@ -1,5 +1,6 @@
 package ch05.array04;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 //5. int배열을 10개 생성하세요.
@@ -17,6 +18,7 @@ public class Resolve5 {
 		for(int i=0;i<num.length;i++) {
 			total += num[i];
 		}
+		System.out.println(Arrays.toString(num));
 		
 		System.out.println("총점" + total );
 		
