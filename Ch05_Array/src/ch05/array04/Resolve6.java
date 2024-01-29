@@ -13,9 +13,9 @@ public class Resolve6 {
 		int[] scores = new int[5];
 		
 		for(int i=0;i<5;i++) {
-			System.out.println("학생"+(i+1)+"의 이름을 입력하세요");
+			System.out.print("학생"+(i+1)+"의 이름을 입력하세요");
 			names[i]=sc.next();
-			System.out.println("학생"+(i+1)+"의 점수를 입력하세요");
+			System.out.print("학생"+(i+1)+"의 점수를 입력하세요");
 			scores[i]=sc.nextInt();
 		
 				if(scores[i] >=90) 
