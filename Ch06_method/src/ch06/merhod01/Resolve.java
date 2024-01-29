@@ -32,9 +32,15 @@ public class Resolve {
 		int num0 = sc.nextInt();
 		System.out.print("정수를 입력하세요 >>");
 		int num1 = sc.nextInt();
+		System.out.println("큰/작은 >>");
+		String choi = sc.next();
 		
-		System.out.println("큰값"+ compare1(num0,num1));
-		System.out.println("작은값"+ compare2(num0,num1));
+		if("큰".equals(choi)) {
+			System.out.println("큰값"+ compare1(num0,num1));
+		}else if("작은".equals(choi)) {
+			System.out.println("작은값"+ compare2(num0,num1));
+		}else
+			System.out.println("잘못된 입력입니다.");
 		
 		sc.close();
 
