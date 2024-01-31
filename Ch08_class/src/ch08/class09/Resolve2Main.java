@@ -4,6 +4,17 @@ package ch08.class09;
 public class Resolve2Main {
 	public static void main(String[] args) {
 		
+		Resolve2Seller seller = new Resolve2Seller(10);
+		Resolve2Buy buyer = new Resolve2Buy(10000);
+		
+		buyer.showPear();
+		seller.showPear();
+		
+		seller.sellerPear(5000);
+		
+		buyer.showPear();
+		seller.showPear();
+		
 	}
 
 }
