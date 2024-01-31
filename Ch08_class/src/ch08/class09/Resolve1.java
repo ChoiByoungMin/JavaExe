@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 // 중화요리집을 임의대로 클래스로 만드세요
 public class Resolve1 {
-	private String []		"칠리새우","팔보채","잡채밥","중국냉면"};
-	// 번호를 입력받는다. chiRestaurant = {"짜장면","짬뽕","볶음밥","탕수육",
-							
+	private String [] chiRestaurant = {"짜장면","짬뽕","볶음밥","탕수육",
+									"칠리새우","팔보채","잡채밥","중국냉면"};
+	// 번호를 입력받는다.
 	private int selecNum;
 	Scanner sc = new Scanner(System.in);
 	
