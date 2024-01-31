@@ -5,7 +5,7 @@ public class Father extends GrandFather{
 	long money = 1000000000000000000L;
 	
 	Father(){
-		private System.out.println("Father 생성자");
+	//	private System.out.println("Father 생성자");
 	}
 	
 	Father(int score, long money){

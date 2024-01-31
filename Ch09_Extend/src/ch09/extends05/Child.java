@@ -5,7 +5,7 @@ public class Child extends Father{
 	float day = 365 + 1.0F/4;
 	
 	Child(){
-		private System.out.println("Child 생성자");
+	//	private System.out.println("Child 생성자");
 	}
 	
 	Child(int score, long money, float day){

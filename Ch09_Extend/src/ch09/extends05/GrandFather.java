@@ -4,7 +4,7 @@ public class GrandFather {
 	int handsomeScore = 10;
 	
 	GrandFather(){
-		private System.out.println("GrandFather 생성자");
+	//	private System.out.println("GrandFather 생성자");
 	}
 	
 	GrandFather(int score){
