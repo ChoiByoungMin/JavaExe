@@ -13,8 +13,8 @@ public class Resolve2Buy {
 	}
 	// sellerPear 리턴한 값을 가져와서 가지고 있는 배 개수에 더한다.
 	public void buyerPear (Resolve2Seller seller, int money) {
-		this.money -= money;
 		this.numOfPear += seller.sellerPear(money);
+		this.money -= money;
 	}
 	
 	public void showPear () {

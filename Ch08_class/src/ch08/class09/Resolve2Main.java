@@ -10,7 +10,7 @@ public class Resolve2Main {
 		buyer.showPear();
 		seller.showPear();
 		
-		seller.sellerPear(5000);
+		buyer.buyerPear(seller, 5000);
 		
 		buyer.showPear();
 		seller.showPear();
