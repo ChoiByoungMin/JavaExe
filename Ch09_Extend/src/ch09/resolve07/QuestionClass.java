@@ -1,6 +1,16 @@
 package ch09.resolve07;
 
+import java.util.Arrays;
 import java.util.Scanner;
+
+import ch09.resolve07.answer01.Add;
+import ch09.resolve07.answer01.Div;
+import ch09.resolve07.answer01.Mul;
+import ch09.resolve07.answer01.Sub;
+import ch09.resolve07.answer02.Triangle;
+import ch09.resolve07.answer03.ArrayUtility;
+import ch09.resolve07.answer04.ArrayUtility2;
+import ch09.resolve07.answer05.Child;
 
 public class QuestionClass {
 
@@ -62,27 +72,77 @@ public static int getSelectMenu(Scanner sc) {
 
 // 1번 문제에 대한 풀이
 public static void answer1(Scanner sc) {
+	Add add = new Add();
+	Sub sub = new Sub();
+	Mul mul = new Mul();
+	Div div = new Div();
+	
+	add.setValue(100,20);
+	sub.setValue(100,20);
+	mul.setValue(100,20);
+	div.setValue(100,20);
+	
+	System.out.println("add.calculate() = "+add.calculate());
+	System.out.println("sub.calculate() = "+sub.calculate());
+	System.out.println("mul.calculate() = "+mul.calculate());
+	System.out.println("div.calculate() = "+div.calculate());
 	
 
 }
 
 // 2번 문제에 대한 풀이
 public static void answer2(Scanner sc) {
+	Triangle tri = new Triangle(4, 5);
+	System.out.printf("밑변이 %d, 높이가 %d인 삼각형의 넓이는 %d\n",
+			4, 5, tri.area());
+	
+	tri.setBase(7);
+	tri.setHeight(12);
+	System.out.printf("밑변이 %d, 높이가 %d인 삼각형의 넓이는 %d\n",
+			7, 12, tri.area());
+
 
 }
 
 // 3번 문제에 대한 풀이
 public static void answer3(Scanner sc) {
+	int[] intArray = {10,2,55,4,12};
+	double[] doubleArray = {1.5, 2.3, 15.1, 17.7, 22.3};
+	
+	int[] intResult = ArrayUtility.doubleToInt(doubleArray);
+	double[] doubleResult = ArrayUtility.intToDouble(intArray);
+	
+	System.out.println(Arrays.toString(intArray));//오리지널 인트형
+	System.out.println(Arrays.toString(doubleArray));//오리지널 더블형
+	System.out.println(Arrays.toString(intResult));//더블에서 인트로
+	System.out.println(Arrays.toString(doubleResult));//인트에서 더블로
 
 }
 
 // 4번 문제에 대한 풀이
 public static void answer4(Scanner sc) {
+	int[] a = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9 , 10};
+	int[] b = new int[] {5, 9, 7, 3, 11, 12, 15};
+	int[] c = new int[] {20, 21, 22};
+	
+	int[] result = ArrayUtility2.concat(a, c);
+	System.out.println(Arrays.toString(result));
+	
+	int[] result1 = ArrayUtility2.remove(a, b);
+	System.out.println(Arrays.toString(result1));
 
 }
 
 // 5번 문제에 대한 풀이
 public static void answer5(Scanner sc) {
+	Child alex = new Child(15);
+	Child james = new Child(9);
+	
+	alex.get(james, 2);
+	james.get(alex, 7);
+	
+	System.out.println("alex의 구슬 수=" + alex.getBallCnt());
+	System.out.println("james의 구슬 수=" + james.getBallCnt());
 
 }
 
