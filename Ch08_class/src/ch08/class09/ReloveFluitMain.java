@@ -1,4 +1,8 @@
 package ch08.class09;
+
+import ch08.class09.answer01.ResolveFruitBuyer;
+import ch08.class09.answer01.ResolveFruitSeller;
+
 //1.FruitMain클래스에		
 //	현재는 buyer.buyApple(seller, 2000); 처럼 프로그래밍되어
 //	있습니다.

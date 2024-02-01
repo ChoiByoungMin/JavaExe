@@ -2,6 +2,8 @@ package ch08.class09;
 
 import java.util.Scanner;
 
+import ch08.class09.answer02.Resolve1;
+
 public class Resolve1Main {
 	public static void main(String[] args) {
 		

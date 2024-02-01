@@ -2,6 +2,12 @@ package ch08.class09;
 
 import java.util.Scanner;
 
+import ch08.class09.answer01.ResolveFruitBuyer;
+import ch08.class09.answer01.ResolveFruitSeller;
+import ch08.class09.answer03.Resolve2Buy;
+import ch08.class09.answer03.Resolve2Seller;
+import ch08.class09.answer04.Resolve3Song;
+
 
 /*
 1.FruitMain클래스에		
@@ -79,6 +85,7 @@ public class QuestionClass {
 			+ "   int square() : 사각형 넓이 리턴\r\n"
 			+ "   void show() : 좌표와 넓이 등 직사각형 정보의 화면 출력\r\n"
 			+ "   boolean equals(Rectangle r) : 인자로 전달된 객체 r과 현 객체가 동일한 좌표의 직사각형이면 true 리턴\r\n"
+			+ "6. program End"
 			+ "";
 	
 	System.out.println("\n\n\n------------------------------------");
@@ -100,21 +107,48 @@ public static int getSelectMenu(Scanner sc) {
 
 // 1번 문제에 대한 풀이
 public static void answer1(Scanner sc) {
+	ResolveFruitSeller seller = new ResolveFruitSeller(20);
+	ResolveFruitBuyer buyer = new ResolveFruitBuyer(10000);
+	
+	buyer.showBuyResult();
+	seller.showSaleResult();
+		
+	seller.saleApple(buyer, 2000); // 과일 구매자의 현재 상황 해결 필요
+	
+	buyer.showBuyResult();
+	seller.showSaleResult();
 
 }
 
 // 2번 문제에 대한 풀이
 public static void answer2(Scanner sc) {
+	
 
 }
 
 // 3번 문제에 대한 풀이
 public static void answer3(Scanner sc) {
+	Resolve2Seller seller = new Resolve2Seller(10);
+	Resolve2Buy buyer = new Resolve2Buy(10000);
+	
+	buyer.showPear();
+	seller.showPear();
+	
+	buyer.buyerPear(seller, 5000);
+	
+	buyer.showPear();
+	seller.showPear();
 
 }
 
 // 4번 문제에 대한 풀이
 public static void answer4(Scanner sc) {
+	Resolve3Song song = new Resolve3Song();
+	
+	song.setSongInfo("Dancing Queen"
+			,"ABBA","arrival","벤뉘 안데르손, 비에른 울바에우스"
+			,"1976년 8월 15일 ","2번");
+	song.show();
 
 }
 

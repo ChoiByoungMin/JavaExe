@@ -58,13 +58,13 @@ package ch09.resolve07;
 		}
 	
 	public static void main(String[] args) {
-		int a =10, b=5;
+
 		//객체 생성
 		Add add = new Add();
 		Sub sub = new Sub();
 		Mul mul = new Mul();
 		Div div = new Div();
 		
-		
+		add.setValue(100,20);
 	}
 }

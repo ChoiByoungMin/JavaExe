@@ -1,4 +1,4 @@
-package ch08.class09;
+package ch08.class09.answer03;
 //나는 마트에 가서 5000원을 주고 배 가격 2500를 샀다를
 //클래스로 설계해서 프로그래밍 하세요
 public class Resolve2Buy {
@@ -6,7 +6,7 @@ public class Resolve2Buy {
 	private int money;// 지불한 돈
 	private int numOfPear;// 구매한 배 개수
 	
-	// 가지고 있는돈, 가지고 있는 배 개수
+	// 가지고 있는돈, 가지고 있는 배 개수 변경 가능한 생성자 생성
 	public Resolve2Buy(int money) {
 		this.money = money;
 		this.numOfPear = 0;
