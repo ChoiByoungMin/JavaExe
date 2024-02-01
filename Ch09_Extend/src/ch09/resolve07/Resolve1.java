@@ -1,6 +1,6 @@
 package ch09.resolve07;
 
-	class Add{
+class Add{
 		// 필드
 		private int a;
 		private int b;
