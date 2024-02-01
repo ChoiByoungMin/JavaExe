@@ -1,4 +1,4 @@
-package ch08.class09;
+package ch08.class09.answer05;
 //Rectangle클래스를 작성하세요
 //int타입의 x1, y1, x2, y2 : 사각형을 구성하는 두 점의 좌표
 //void set(int x1, int y1, int x2, int y2) : 좌표 설정
@@ -7,10 +7,10 @@ package ch08.class09;
 //boolean equals(Rectangle r) : 
 //	인자로 전달된 객체 r과 현 객체가 동일한 좌표의 직사각형이면 true 리턴
 public class Resolve4 {
-	int x1;
-	int y1;
-	int x2;
-	int y2;
+	private int x1;
+	private int y1;
+	private int x2;
+	private int y2;
 	
 	public void set(int x1, int y1, int x2, int y2) {
 		this.x1=x1;
@@ -44,29 +44,6 @@ public class Resolve4 {
 		
 		return false;
 	}
-	public static void main(String[] args) {
-		Resolve4 rc0 = new Resolve4();
-		rc0.set(10, 10, 30, 30);
-		
-		Resolve4 rc1 = new Resolve4();
-		rc1.set(10, 10, 30, 30);
-		
-		Resolve4 rc2 = new Resolve4();
-		rc2.set(20, 20, 50, 50);
-		
-		rc0.show();
-		rc1.show();
-		rc2.show();
-		
-		if(rc0.equals(rc1))
-			System.out.println("rc0과 rc1은 같습니다.");
-		else
-			System.out.println("rc0과 rc1은 다릅니다.");
-		
-		if(rc0.equals(rc2))
-			System.out.println("rc0과 rc2은 같습니다.");
-		else
-			System.out.println("rc0과 rc2은 다릅니다.");
-	}
+	
 
 }

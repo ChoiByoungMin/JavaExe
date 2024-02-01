@@ -4,9 +4,11 @@ import java.util.Scanner;
 
 import ch08.class09.answer01.ResolveFruitBuyer;
 import ch08.class09.answer01.ResolveFruitSeller;
+import ch08.class09.answer02.Resolve1;
 import ch08.class09.answer03.Resolve2Buy;
 import ch08.class09.answer03.Resolve2Seller;
 import ch08.class09.answer04.Resolve3Song;
+import ch08.class09.answer05.Resolve4;
 
 
 /*
@@ -122,8 +124,12 @@ public static void answer1(Scanner sc) {
 
 // 2번 문제에 대한 풀이
 public static void answer2(Scanner sc) {
+	Resolve1 ans = new Resolve1(sc, new String[] {"짜장면",
+			"짬뽕","탕수육","칠리새우","유산슬","유린기","깐풍기","볶음밥"},"마라후");
+	ans.viewMenu();
+	ans.selecMenu();
+	ans.delFood();
 	
-
 }
 
 // 3번 문제에 대한 풀이
@@ -154,6 +160,28 @@ public static void answer4(Scanner sc) {
 
 // 5번 문제에 대한 풀이
 public static void answer5(Scanner sc) {
+	Resolve4 rc0 = new Resolve4();
+	rc0.set(10, 10, 30, 30);
+	
+	Resolve4 rc1 = new Resolve4();
+	rc1.set(10, 10, 30, 30);
+	
+	Resolve4 rc2 = new Resolve4();
+	rc2.set(20, 20, 50, 50);
+	
+	rc0.show();
+	rc1.show();
+	rc2.show();
+	
+	if(rc0.equals(rc1))
+		System.out.println("rc0과 rc1은 같습니다.");
+	else
+		System.out.println("rc0과 rc1은 다릅니다.");
+	
+	if(rc0.equals(rc2))
+		System.out.println("rc0과 rc2은 같습니다.");
+	else
+		System.out.println("rc0과 rc2은 다릅니다.");
 
 }
 

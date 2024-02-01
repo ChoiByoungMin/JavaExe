@@ -9,6 +9,7 @@ public class ResolveFruitSeller {
 		this.numOfApple = numOfApple;
 	}
 	public int saleApple(ResolveFruitBuyer buyer, int money) {
+		
 		int num = money/APPLE_PRICE;
 		numOfApple -= num;
 		saleMoney += money;
