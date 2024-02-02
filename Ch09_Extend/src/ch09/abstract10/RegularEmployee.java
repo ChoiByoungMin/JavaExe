@@ -26,7 +26,7 @@ public class RegularEmployee extends Employee {
 		super.showEmployeeInfo();  // Employee의 show~호출
 		System.out.println("yearSalary : "+ yearSalary);
 		System.out.println("bonus : "+ bonus);
-		System.out.println("moneyPay : "+ getMonthPay());
+		System.out.printf("moneyPay : %.2f\n", getMonthPay());
 	}
 	
 	
