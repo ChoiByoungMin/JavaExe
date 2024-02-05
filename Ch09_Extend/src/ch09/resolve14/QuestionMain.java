@@ -23,7 +23,7 @@ public class QuestionMain {
 		}
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		QuestionMain qm = new QuestionMain();
 		Scanner sc = new Scanner(System.in);
 		
