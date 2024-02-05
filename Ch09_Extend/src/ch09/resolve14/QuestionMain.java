@@ -7,7 +7,8 @@ public class QuestionMain {
 	IQuestionAnswer[] qaArr = {
 			new Answer1(),
 			new Answer2(),
-			new Answer3()
+			new Answer3(),
+			new Exit()
 	};
 	
 	public int getSelectQuestion(Scanner sc) {
@@ -25,16 +26,18 @@ public class QuestionMain {
 	public static void main(String[] args) {
 		QuestionMain qm = new QuestionMain();
 		Scanner sc = new Scanner(System.in);
+		
 		boolean isRun = true;
 		while(isRun) {
 			qm.printQuestion();
 			int sel = qm.getSelectQuestion(sc);
 			
-			// 1이상 3이하의 값 입력
+
 			if(sel>0 && sel <= qm.qaArr.length) {
-				//0 이상 2이하의 인덱스로 변환
-			IQuestionAnswer iqa = qm.qaArr[sel-1];
-			iqa.answer(sc);
+				// 인덱스는 입력값보다 1작으므로
+				IQuestionAnswer iqa = qm.qaArr[sel-1];
+				iqa.answer(sc);
+				isRun = iqa.isRun();
 		
 			}else {
 				System.out.println("문제 번호 잘 못 선택했습니다~~");

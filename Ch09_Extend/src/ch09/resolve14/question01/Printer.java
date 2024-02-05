@@ -1,4 +1,4 @@
-package ch09.resolve14a;
+package ch09.resolve14.question01;
 
 //1. 다음 상속구조를 설계하세요
 //모든 프린터는 모델명, 제조사, 인터페이스 종류(USB, paraller port), 인쇄매수,
@@ -13,12 +13,29 @@ package ch09.resolve14a;
 //그리고 실행 프로그램을 작성해서 동작시키세요
 //
 //
-//                  프린터
+//                프린터
 //
 //잉크젯프린터             레이저프린터
 
-public interface IPrint {
-	public void usb();
-	public void parallerPort();
+public class Printer {
+	protected String modelName;
+	protected String manuFacturer;
+	protected P_INTERFACE pInterface;
+	protected int printCount;
+	protected int paperRemains;
+	
+	public Printer(String modelName, String manuFacturer, P_INTERFACE pInterface, int printCount, int paperRemains) {
+
+		this.modelName = modelName;
+		this.manuFacturer = manuFacturer;
+		this.pInterface = pInterface;
+		this.printCount = printCount;
+		this.paperRemains = paperRemains;
+	}
+	
+	public void print() {
+		this.paperRemains--;
+	}
+	
 
 }
