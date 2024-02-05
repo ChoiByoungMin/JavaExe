@@ -1,6 +1,6 @@
-package ch09.resolve14b.factory01;
+package ch09.resolve14.question02.factory01;
 
-import ch09.resolve14b.ITablet;
+import ch09.resolve14.question02.ITablet;
 
 public class SamsungTablet implements ITablet {
 

@@ -22,7 +22,11 @@ public class Answer2 implements IQuestionAnswer {
 	@Override
 	public void answer(Scanner sc) {
 		sc.nextLine();  // Enter 치기 전까지 멈춰
-		System.out.println("2번 문제 실행~~ ");
+		
+		
+		
+		
+		
 		sc.nextLine();  // Enter 치기 전까지 멈춰
 		
 	}

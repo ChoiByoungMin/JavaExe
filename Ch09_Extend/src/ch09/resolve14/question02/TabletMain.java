@@ -1,9 +1,10 @@
-package ch09.resolve14b;
+package ch09.resolve14.question02;
 
-import ch09.resolve14b.factory01.LgTablet;
-import ch09.resolve14b.factory01.SamsungTablet;
-import ch09.resolve14b.factory01.SonyTablet;
-import ch09.resolve14b.order01.TabletTester;
+import ch09.resolve14.question02.factory01.LgTablet;
+import ch09.resolve14.question02.factory01.SamsungTablet;
+import ch09.resolve14.question02.factory01.SonyTablet;
+import ch09.resolve14.question02.order01.TabletTester;
+
 
 public class TabletMain {
 	public static void main(String[] args) throws InterruptedException {

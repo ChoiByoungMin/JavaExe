@@ -1,6 +1,6 @@
-package ch09.resolve14b.order01;
+package ch09.resolve14.question02.order01;
 
-import ch09.resolve14b.ITablet;
+import ch09.resolve14.question02.ITablet;
 
 public class TabletTester {
 	private final int TEST_NUM = 3;
