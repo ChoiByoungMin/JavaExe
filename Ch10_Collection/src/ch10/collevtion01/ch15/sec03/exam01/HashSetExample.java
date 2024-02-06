@@ -18,6 +18,9 @@ import java.util.Set;
  * 
  * 해시를 이용해서 중복을 검사
  * 
+ * '검색속도는 빠르다'
+ * '중복 허용 않는다'
+ * '순서가 보장 되지 않는다'
  */
 public class HashSetExample {
 	public static void main(String[] args) {
