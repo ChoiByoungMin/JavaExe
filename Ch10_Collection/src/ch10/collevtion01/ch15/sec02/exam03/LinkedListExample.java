@@ -1,6 +1,7 @@
 package ch10.collevtion01.ch15.sec02.exam03;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class LinkedListExample {
@@ -8,7 +9,7 @@ public class LinkedListExample {
 		//ArrayList 컬렉션 객체 생성
 		List<String> list1 = new ArrayList<String>();
 		//ArrayList 컬렉션 객체 생성
-		List<String> list2 = new ArrayList<String>();
+		List<String> list2 = new LinkedList<String>();
 		
 		//시작 시간과 끝 시간을 저장할 변수 선언
 		long startTime;
