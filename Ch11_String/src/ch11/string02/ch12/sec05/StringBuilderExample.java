@@ -8,9 +8,18 @@ class MyStringBuilder{
 	
 	public MyStringBuilder append(String str) {
 		char[] chArr = str.toCharArray();
-		for(char ch : chArr)
-			chList.add(ch);
-		
+		for(char ch : chArr) {
+			/*Boxing
+			 * 기본타입/지역변수 ch는 스택에 존재
+			 * chList.add(ch); 이 구문이 처리될 때
+			 * char -> Character클래스로 변환된다.
+			 * Character클래스 내부에는 char를 보관하고 있다.
+			 * ch 값은 결국 객체로 변환되어 힙으로 이동한다.
+			 * 
+			 * 성능의 저하 현상
+			 */
+			chList.add(ch); // char -> Character클래스로 변환
+		}
 		return this;
 	}
 	public MyStringBuilder insert(int idx, String str) {
@@ -23,6 +32,11 @@ class MyStringBuilder{
 	@Override
 	public String toString() {
 		String str = "";
+		/* UnBoxing현상 발생
+		 * chList내부에서 Character클래스 객체로 힙공간에 보관하다가
+		 * 지역변수 char ch에 대입할 때 다시 스택에 존재하는 ch로 값을 전달한다.
+		 * 
+		 */
 		for(char ch : chList)
 			str += ch;
 		return str;
