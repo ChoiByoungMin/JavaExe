@@ -19,7 +19,10 @@ public class EmployeeManager {
 		System.out.println("5. 정규직 보기");
 		System.out.println("6. 임시직 보기");
 		System.out.println("7. 일용직 보기");
-		System.out.println("8. 종료");
+		System.out.println("8. 사번으로 검색");
+		System.out.println("9. 사번 수정");
+		System.out.println("10.사번 삭제");
+		System.out.println("11. 종료");
 		System.out.println("번호 입력 >>");
 		int sel = sc.nextInt();
 		return sel;

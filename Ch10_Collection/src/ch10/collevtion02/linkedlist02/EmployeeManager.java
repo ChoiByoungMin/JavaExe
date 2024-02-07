@@ -109,10 +109,42 @@ public class EmployeeManager {
 		
 	}
 	
-	private void search() {						//수정 필요
+	private void search() {						
 		System.out.print("사번을 입력해주세요 >>");
 		String empno = sc.next();
-		((Employee) this.empLink).getEmpno();
+		// 사번정보를 가져와서 그정보와 일치하는지 확인
+		for(Employee emp : empLink) {
+			if(emp.getEmpno().equals(empno)) {
+			emp.showEmployeeInfo();
+			return;
+			}
+		}
+		System.out.println("해당하는 사원을 찾지 못했습니다.");
+	}
+	
+	private void modify() {
+		System.out.print("사번을 입력해주세요 >>");
+		String empno = sc.next();
+		
+		for(Employee emp : empLink) {
+			if(emp.getEmpno().equals(empno)) {
+				
+			}
+		}
+	}
+	
+	private void remove() {
+		System.out.print("사번을 입력해 주세요 >> ");
+		String empno = sc.next();
+		
+		for(Employee emp : empLink) {
+			if(emp.getEmpno().equals(empno)) {
+				empLink.remove(emp);
+				System.out.println("사원 정보를 삭제 했습니다.");
+				return;
+			}
+		}
+		System.out.println("정보를 찾을수 없습니다.");
 	}
 	
 	public void run() {
@@ -147,8 +179,10 @@ public class EmployeeManager {
 				search();
 				break;
 			case EmpMenu.MODIFY:
+				 modify();
 				break;
 			case EmpMenu.REMOVE:
+				remove();
 				break;	
 			case EmpMenu.EXIT:
 				emp = null;

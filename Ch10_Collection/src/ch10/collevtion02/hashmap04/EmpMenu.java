@@ -14,6 +14,9 @@ public interface EmpMenu {
 	public int REG_INFO = 5;
 	public int TEMP_INFO = 6;
 	public int PART_INFO = 7;
-	public int EXIT = 8;
+	public int SEARCH = 8;
+	public int MODIFY = 9;
+	public int REMOVE = 10;
+	public int EXIT = 11;
 
 }
