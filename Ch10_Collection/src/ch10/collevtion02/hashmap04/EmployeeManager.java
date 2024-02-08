@@ -3,6 +3,8 @@ package ch10.collevtion02.hashmap04;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.Set;
+import java.util.Iterator;
 
 public class EmployeeManager {
 	private final int EMP_NUM = 100; // 100명 사원이 최대
@@ -68,41 +70,82 @@ public class EmployeeManager {
 		
 	}
 	private boolean saveEmployee(Employee emp) {
-		boolean isSave = true;
-		
-		if(this.empMap.size() < EMP_NUM) {
-			this.empMap.put(emp.getEmpno(), emp);
-			isSave = true;
-		}else {
-			
-			return isSave;
-		}
-	
+		Employee res = empMap.put(emp.empno, emp);
+		if(res == null)
+			System.out.println("새로 저장합니다.");
+		else
+			System.out.println("정보를 수정합니다.");
 		return true;
 	}
 	private void viewRegularEmployeeInfo() {
-		for(Employee emp : this.empMap.values()) {
+		Set<String> keySet = empMap.keySet();
+		Iterator<String> keyIterator = keySet.iterator();
+		
+		while(keyIterator.hasNext()) {
+			String k = keyIterator.next();
+			Employee emp = empMap.get(k);
 			if(emp instanceof RegularEmployee)
-			emp.showEmployeeInfo();
+				emp.showEmployeeInfo();
 		}
 	}
 	private void viewTempEmployeeInfo() {
-		for(Employee emp : this.empMap.values()) {
+		Set<String> keySet = empMap.keySet();
+		Iterator<String> keyIterator = keySet.iterator();
+		
+		while(keyIterator.hasNext()) {
+			String k = keyIterator.next();
+			Employee emp = empMap.get(k);
 			if(emp instanceof TempEmployee)
-			emp.showEmployeeInfo();
+				emp.showEmployeeInfo();
 		}
 	}
 	private void viewPartTimeEmployeeInfo() {
-		for(Employee emp : this.empMap.values()) {
+		Set<String> keySet = empMap.keySet();
+		Iterator<String> keyIterator = keySet.iterator();
+		
+		while(keyIterator.hasNext()) {
+			String k = keyIterator.next();
+			Employee emp = empMap.get(k);
 			if(emp instanceof PartTimeEmployee)
-			emp.showEmployeeInfo();
+				emp.showEmployeeInfo();
 		}
 	}
 	private void viewAllEmployeeInfo() {
-		for(Employee emp : this.empMap.values()) {
-		emp.showEmployeeInfo();
+		Set<String> keySet = empMap.keySet();
+		Iterator<String> keyIterator = keySet.iterator();
+		
+		while(keyIterator.hasNext()){
+			String k = keyIterator.next();
+			Employee emp = empMap.get(k);
+			emp.showEmployeeInfo();
 		}
 		
+	}
+	public void search() {
+		System.out.print("사번을 입력해 주세요 >> ");
+		String empno = sc.next();
+		
+		Employee emp = empMap.get(empno);
+		if(emp!=null) {
+			emp.showEmployeeInfo();
+		}
+		
+	}
+	
+	public void modify() {
+		System.out.println("메인 메뉴에서 바꾸고자 하는 사원클래스를 선택후 사원번호를 입력하시면 갱신이 됩니다.");
+		sc.nextLine();
+	}
+	
+	public void remove() {
+		System.out.print("사번을 입력해 주세요 >> ");
+		String empno = sc.next();
+		
+		Employee emp = empMap.get(empno);
+		if(emp != null) {
+			empMap.remove(empno);
+		}
+		System.out.println("정보가 삭제 되었습니다.");
 	}
 	public void run() {
 		boolean isRun = true;
@@ -131,6 +174,15 @@ public class EmployeeManager {
 				break;
 			case EmpMenu.PART_INFO:
 				viewPartTimeEmployeeInfo();
+				break;
+			case EmpMenu.SEARCH:
+				search();
+				break;
+			case EmpMenu.MODIFY:
+				modify();
+				break;
+			case EmpMenu.REMOVE:
+				remove();
 				break;
 			case EmpMenu.EXIT:
 				emp = null;

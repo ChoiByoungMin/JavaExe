@@ -67,18 +67,25 @@ public class EmployeeManager {
 		return emp;
 		
 	}
-	private boolean saveEmployee(Employee emp) {
-		boolean isSave = true;
-		
-		if(this.empLink.size() < EMP_NUM) {
-			this.empLink.add(emp);;
-			isSave = true;
-		}else {
-			
-			return isSave;
+	private boolean saveEmployee(Employee newEmp) {
+		boolean isSave = false;
+		for(int i =0; i<empLink.size();i++) {
+			Employee emp = empLink.get(i);
+			if(emp.getEmpno().equals(newEmp.empno)) {
+				System.err.println(emp.empno + "사번을 갱신합니다.");
+				empLink.remove(i);
+				empLink.add(i,newEmp);
+				isSave = true;
+				break;
+			}
 		}
-	
-		return true;
+		
+		if(!isSave) {
+			System.out.println("새로운 사원을 추가합니다~");
+			isSave = empLink.add(newEmp);
+		}
+		
+		return isSave;
 	}
 	
 	private void viewRegularEmployeeInfo() {
@@ -123,19 +130,8 @@ public class EmployeeManager {
 	}
 	
 	private void modify() {
-		System.out.print("사번을 입력해주세요 >>");
-		String empno = sc.next();
-		
-		// 정규직 계약직 선택할변수 선택
-		//변수 받은걸로 switch case 문 사용
-		// 수정할때 어떤 함수를 쓰는지 찾고 그 함수가 어떤 파라미터를 사용는지
-		// set Index 셋팅값 - 덮어쓰기 사용
-		
-		for(Employee emp : empLink) {
-			if(emp.getEmpno().equals(empno)) {
-				
-			}
-		}
+		System.out.print("Main Menu 가셔셔 사번을 입력하시면 수정됩니다. >>");
+		sc.nextLine();
 	}
 	
 	private void remove() {
