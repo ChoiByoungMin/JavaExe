@@ -126,6 +126,11 @@ public class EmployeeManager {
 		System.out.print("사번을 입력해주세요 >>");
 		String empno = sc.next();
 		
+		// 정규직 계약직 선택할변수 선택
+		//변수 받은걸로 switch case 문 사용
+		// 수정할때 어떤 함수를 쓰는지 찾고 그 함수가 어떤 파라미터를 사용는지
+		// set Index 셋팅값 - 덮어쓰기 사용
+		
 		for(Employee emp : empLink) {
 			if(emp.getEmpno().equals(empno)) {
 				
