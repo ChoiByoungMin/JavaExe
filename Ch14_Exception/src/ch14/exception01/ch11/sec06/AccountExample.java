@@ -1,5 +1,5 @@
 package ch14.exception01.ch11.sec06;
-
+// 우리가 예외를 정의 하고싶다/ 만들고 싶다.
 public class AccountExample {
 	public static void main(String[] args) {
 		Account account = new Account();
