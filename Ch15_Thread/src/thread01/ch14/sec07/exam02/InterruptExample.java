@@ -10,6 +10,7 @@ public class InterruptExample {
 		}catch (InterruptedException e) {
 			
 		}
+		// thread에 run() 에 interruptedException을 throw한다.
 		thread.interrupt();
 	}
 
