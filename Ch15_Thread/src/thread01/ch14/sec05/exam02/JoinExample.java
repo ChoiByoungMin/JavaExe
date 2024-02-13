@@ -6,6 +6,7 @@ public class JoinExample {
 		sumThread.start();
 		try {
 			sumThread.join();
+			//Thread.sleep(100);
 		}catch (InterruptedException e) {
 			
 		}
