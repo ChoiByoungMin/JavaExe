@@ -22,7 +22,7 @@ class ShowNameThread extends Thread{
 			System.out.println(i+ "안녕하세요 : " + this.getName() + "입니다.");
 			
 			try {
-				sleep(50);
+				sleep(100);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
