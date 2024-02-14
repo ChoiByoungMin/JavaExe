@@ -20,7 +20,7 @@ public class StreamForEach {
 			System.out.print(e+", ");
 		System.out.println();
 		
-		// 4) 스트림 사용
+		// 4) 스트림 사용(스트림객체 -> 최종연산)
 		Arrays.stream(arr).forEach(n->System.out.print(n + ", "));
 		
 	}
