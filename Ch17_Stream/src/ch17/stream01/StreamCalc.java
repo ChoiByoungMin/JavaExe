@@ -20,21 +20,19 @@ public class StreamCalc {
 		
 		for(String name : nameList) {
 			if(name.length() >= 5) {
-				System.out.println(name + ", ");
+				System.out.print(name + ", ");
 			}
 		}
 		System.out.println();
 		
 		Stream<String> strm = nameList.stream();
 		Stream<String> strmF = strm.filter(s->s.length() >= 5);
-		strmF.forEach(s->System.out.println(s + ", "));	
+		strmF.forEach(s->System.out.print(s + ", "));
 		System.out.println();
-		}
 		
-		nameList.stream()						// 1) 스트림객체
-				.filter(s->s.length() >= 5)		// 2) 중간연산(참일 때 새로운 스트림)
-				.filter(s->s.length() <= 10)
-				.forEach(s->System.out.println(s + ", "));	// 최종연산
+		nameList.stream()					// 1) 스트림객체
+				.filter(s->s.length() >= 5)	// 2) 중간연산(참일 때 새로운 스트림)
+				.filter(s->s.length() < 10)
+				.forEach(s->System.out.print(s + ", ")); // 최종연산
 	}
-
 }
