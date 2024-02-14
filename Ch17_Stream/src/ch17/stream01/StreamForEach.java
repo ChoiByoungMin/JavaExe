@@ -22,6 +22,7 @@ public class StreamForEach {
 		
 		// 4) 스트림 사용
 		Arrays.stream(arr).forEach(n->System.out.print(n + ", "));
+		
 	}
 
 }
