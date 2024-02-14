@@ -9,7 +9,7 @@ public class ConstructorRefenceExample {
 		System.out.println(m1);
 		System.out.println();
 
-		// Member클래스의 param 2개짜리 생성자 메서드 전달
+		// Member클래스의 param 2개짜리 생성자 메서드 전달 
 		Member m2 = person.getMember2(Member :: new);
 		System.out.println(m2);
 	}
