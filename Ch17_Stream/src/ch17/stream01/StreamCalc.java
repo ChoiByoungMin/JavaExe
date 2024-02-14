@@ -29,6 +29,10 @@ public class StreamCalc {
 		Stream<String> strmF = strm.filter(s->s.length() >= 5);
 		strmF.forEach(s->System.out.print(s + ", "));
 		System.out.println();
+//		한번 사용한 스트림은 재사용 할 수 없다.
+//		System.out.println("-----------------------------");
+//		strmF.forEach(s->System.out.println(s +", "));
+//		System.out.println();
 		
 		nameList.stream()					// 1) 스트림객체
 				.filter(s->s.length() >= 5)	// 2) 중간연산(참일 때 새로운 스트림)
