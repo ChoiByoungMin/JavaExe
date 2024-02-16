@@ -52,8 +52,10 @@ class HttpThread extends Thread {
 			
 			// 브라우저가 요청한 파일 찾기
 			String line = br.readLine();
+			System.out.println("line = "+ line);
 			int start = line.indexOf(" ")+2;
 			int end = line.lastIndexOf("HTTP")-1;
+			System.out.println("start = "+ start + ", end = "+end);
 			String fileName = line.substring(start,end);
 			if(fileName.equals(""))
 				fileName = "index.html";
